@@ -1,0 +1,66 @@
+
+
+
+
+
+.saludo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.introduccion{
+    
+    height: 40vh;
+    background-image: linear-gradient(
+        to top,
+        rgba(161, 140, 209, 0.5) 0%,
+        rgba(251, 194, 235, 0.5) 100%
+      ),
+      url(https://img.freepik.com/vector-gratis/fondo-acuarela-abstracta_91008-108.jpg?size=626&ext=jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.intro{
+    text-align: center;
+    align-self: center;
+}
+.intro img{
+    margin: 20px;
+}
+
+
+.galeria-mes{
+    margin: 50px;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img-galeria-mes{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+.galeria-resenas{
+    margin: 50px;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.img-galeria-resenas{
+    object-fit: cover;
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}

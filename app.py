@@ -14,3 +14,7 @@ def index():
 @app.route('/login')
 def login():
     return render_template('/login.html')
+
+@app.route('/categorias')
+def categorias():
+    return render_template('/categorias.html')

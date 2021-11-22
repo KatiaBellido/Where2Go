@@ -1,23 +1,40 @@
-
-
-
-
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Questrial', sans-serif;
+}
+:root{
+    scroll-behavior: smooth;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 50px 0;
+}
+.titulo{
+    font-size: 50px;
+}
 .saludo{
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
-.introduccion{
-    
-    height: 40vh;
+header{
+    display: flex;
+    height: 15vh;
     background-image: linear-gradient(
-        to top,
-        rgba(161, 140, 209, 0.5) 0%,
-        rgba(251, 194, 235, 0.5) 100%
+        to right,
+        rgba(132, 215, 240, 0.65) 0%,
+        rgba(207, 112, 251, 0.5) 100%
       ),
-      url(https://img.freepik.com/vector-gratis/fondo-acuarela-abstracta_91008-108.jpg?size=626&ext=jpg);
+      url(/static/img/bg-01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -31,6 +48,17 @@
     margin: 20px;
 }
 
+.hamburger{
+    position: fixed;
+    top: 50px;
+    left: 30px;
+    background: white;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    border-radius: 20px;
+    box-shadow: 0 0 px rgb(23, 79, 128);
+}
 
 .galeria-mes{
     margin: 50px;
@@ -48,7 +76,6 @@
     cursor: pointer;
 }
 
-
 .galeria-resenas{
     margin: 50px;
     display: flex;
@@ -63,4 +90,31 @@
     margin-bottom: 15px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100%;
+    background-image: linear-gradient(to top,
+     rgb(168, 237, 234,.9) 0%, 
+     rgb(254, 214, 227,.5) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-110%);
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+.spread {
+    transform: translate(0);
+}
+.menu-navegacion a{
+    color: rgb(11, 39, 63);
+    text-decoration: none;
+    font-size: 20px;
+
 }

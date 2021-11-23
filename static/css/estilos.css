@@ -23,6 +23,23 @@ header{
     background-attachment: fixed;
     background-position: center;
 }
+
+.footer{
+    height: 5%;
+    background-image: linear-gradient(
+        to right,
+        rgba(132, 215, 240, 0.65) 0%,
+        rgba(207, 112, 251, 0.5) 100%
+      ),
+      url(/static/img/bg-01.jpg);
+    left: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 .contenedor{
     width: 90%;
     max-width: 1200px;
@@ -171,4 +188,63 @@ header{
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+}
+
+.rightcolumn {
+    position: relative;
+    width: 100%;
+    padding-left: 40%;
+}
+
+.post {
+    background-color: white;
+    text-align: right;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.post img{
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background: rgb(156, 207, 228);
+    padding-bottom: 1px;
+  }
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.social-media {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.social-media-icon:hover {
+    background: #667eea;
+    color: aquamarine;
+}
+
+.social-media-icon i {
+    font-size: 30px;
+    line-height: 60px;
 }

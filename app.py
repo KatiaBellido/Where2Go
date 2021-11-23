@@ -67,3 +67,7 @@ def signup2():
 @app.route('/categorias')
 def categorias():
     return render_template('/categorias.html')
+
+@app.route('/single')
+def single():
+    return render_template('/single.html')

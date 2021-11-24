@@ -182,8 +182,15 @@ header{
     font-family: arial;
     padding-top: 1%;
     padding-bottom: 1%;
-  }
-
+    width:  450px;
+    height: 370px;
+}
+.card img{
+    padding: 1%;
+    object-fit: cover;
+    width:  300px;
+    height: 200px;
+}
 .catalogue {
     display: flex;
     flex-wrap: wrap;

@@ -63,7 +63,7 @@ def signup2():
     return render_template('/signup.html')
 
 
-@app.route('/categorias/<nombre>',methods=['GET'])
+@app.route('/categorias/<nombre>')
 def categorias(nombre):
     if nombre == 'Restaurantes':
         _cursor = restaurantes.find()
@@ -78,8 +78,25 @@ def categorias(nombre):
             mus.append(doc)
         return render_template('/categorias.html', name= nombre,data=mus)
     else:
-        return render_template('/single.html')
+        return render_template('/index.html')
 
-@app.route('/single')
-def single():
-    return render_template('/single.html')
+@app.route('/single/<categoria>/<nombre>', methods=['POST'])
+def single(categoria,nombre):
+    if categoria == 'Restaurantes':
+        filter = {"nombre":nombre}
+        search = restaurantes.find_one(filter)
+        if search:
+            return render_template('/single.html', data=search)
+        else:
+            return "<p>Hay un error</p>" 
+
+    elif categoria == 'Museos':
+        filter = {"nombre":nombre}
+        search = museos.find_one(filter)
+        if search:
+            return render_template('/single.html', data=search)
+        else:
+            return "<p>Hay un error</p>" 
+    else:
+        return render_template('/index.html')
+

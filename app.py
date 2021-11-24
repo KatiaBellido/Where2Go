@@ -80,7 +80,7 @@ def categorias(nombre):
     else:
         return render_template('/index.html')
 
-@app.route('/single/<categoria>/<nombre>', methods=['POST'])
+@app.route('/single/<categoria>/<nombre>')
 def single(categoria,nombre):
     if categoria == 'Restaurantes':
         filter = {"nombre":nombre}

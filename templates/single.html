@@ -15,34 +15,35 @@
 </head>
 
 <body>
+
     <header class="header" id="inicio">
         <img src="/static/img/icons/favicon.ico" alt="Menu" class="hamburger" >
-        <nav  class="menu-navegacion">
+        <nav class="menu-navegacion">
             <a href="/" class="">Inicio</a>
             <a href="/categorias/{{"Restaurantes"}}" class="">Restaurantes</a>
-            <a href="/categorias/Museos" class="">Museos</a>
-        
+            <a href="/categorias/{{"Museos"}}" class="">Museos</a>
         </nav>
-
         <div class="contenedor saludo">
             <h2 class="titulo">Where 2 Go</h2>
         </div>
     </header>
 
+
     <main>
 
         <section class="introduccion">
             <div class="intro">
-                <img src="/static/img/where2go.png" alt="" />
             </div>
         </section>
 
         <div class="rightcolumn">
             <div class="post">
-                <h2>{{data.nombre}}</h2>
-                <h5>Aquí puede ir el costo, o cualquier otra cosa</h5>
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="border: 5px solid #cf70fb80;">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, necessitatibus. Iure, nam sit fuga quia delectus, corrupti inventore adipisci facilis maiores asperiores praesentium reprehenderit in amet soluta vero at sapiente!</p>
+                <h1 class= "subtitulo">{{data.nombre}}</h2>
+                <img src={{data.imagen}}>
+                <p>{{data.descripcion}}</p>
+                <p>{{data.horario}}</p>
+                <p>{{data.calificacion}}</p>
+                <p>{{data.costo}}</p>
               </div>
         </div>
         <footer id="contacto">

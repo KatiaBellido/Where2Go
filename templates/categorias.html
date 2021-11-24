@@ -32,21 +32,19 @@
 
         <section class="introduccion">
             <div class="intro">
-                <img src="/static/img/where2go.png" alt="" />
                 <h1 class= "subtitulo">{{name}}</h1>
             </div>
         </section>
 
         <section class="catalogue">
             {% for i in data %}
-            <form method="post" action="/single/{{name}}/{{i.nombre}}">
+            
             <div class="card">
                 <img src={{i.imagen}} alt="Test" style="width:100%">
                 <h1>{{i.nombre}}</h1>
                 <p>{{i.calificacion}}</p>
-                <p><button type="submit" class="login100-form-btn">Ver</button></p>
+                <a href="/single/{{name}}/{{i.nombre}}"> boton falso</a>
             </div>
-            </form>
             {% endfor %}
 
         </section>   

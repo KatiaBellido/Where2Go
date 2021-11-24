@@ -5,9 +5,9 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>  
     <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwpJREFUaEPtmP2RTUEQxc9GgAgQASJABIgAESACRIAIEAEyIAJEgAjIgPpVzaiuo++9M3fue6+23Plnt97O6zmn+/TXnumcn7Nzjl87gVNHcI/A/xiBi5LuSnqzBflTSOi9pDuSXkp6MkpilMAVSY8k3ZJ0vYD5IumjpFeSvhtAPP8ufEYUHo6QGCGABwE/d9zLELpsX4DAajmtJYCXrzV6jrs3yl2ihIScxNUkWk3m1xBo8bw/jpweBxJI7EK49FbSgybEdqmXAJr/ZjZ+FHB4moOXITnnZcC+NjurotBLwL0PeAD/MjCUSghFEjEKXPd8uFfk1RWIXgKu/blHveLEXADkM0lPA1on2ESkl8Bvs3op8X69ksktvucEP5Vy3AS8XjolAc+DD6VDH5TAiIS+hmaXSeh5kdVBCXgSk4jU+CyJP0tCRvW4xt3WUQhkuoYENR4Pc2hwgIvg+TyWSf4GQapVPbfLCHLQCGB8tJFhg0Z2MyClHDvhJiK9SVyN9owSrv2siTGV4pjus5ZAayRc9xn4GhGGOp9eFwmNEMA4YUf/jNN1uMPjSASPRkBT4CNImhvJ3HxGCTQ/VBKW5gVZfsZhLtphtEZSXtnSt45JwAEQEaKXjeVEkKq0eHoJIBnWQbzI73ULm3qIZEdGAKLTZhqv+7FHpGlbayUAWAavVTN7YAcoNO5EsM+i49FYnFBbCOAhZvfYdBZDO3MBbVNxABxPNoJPdfq/31si0FI51pLJdmEkSYeOZ3ZnniPg4241StekRKLruoVNkQAQ+UKy+obGdzKJZPMWY0hXFcpmFQys7piFxAtDgZwAF0smUvpp9xgYU2dNRYBku99qpENDmUSyhb7+86uanpxUMwLZxDnieeeHnDwSvtB77k1uaxkBf2D1pDgTGV/o3UEeKSTG+vrPyQh4+Lb0fgXgTsrWSd+/U7lnH/qoPJlAHdr3q+5h/49Fs+mMQBPz5hemL27yzk5gIBIHi8AApuN/dWkWOj6izhd3Ap0O2/z6HoHNXdppcI9Ap8M2v/4H1OqlMSIKpj0AAAAASUVORK5CYII="/>
-    <link rel="stylesheet" href="static/css/estilos.css">
+    <link rel="stylesheet" href="/static/css/estilos.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="static/img/where2go.png" />
+    <link rel="shortcut icon" href="/static/img/where2go.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&family=Questrial&display=swap" rel="stylesheet">
@@ -19,14 +19,12 @@
         <img src="/static/img/icons/favicon.ico" alt="Menu" class="hamburger" >
         <nav  class="menu-navegacion">
             <a href="/" class="">Inicio</a>
-            <a href="/categorias" class="">Restaurantes</a>
-            <a href="/categorias" class="">Museos</a>
-
+            <a href="/categorias/{{"Restaurantes"}}" class="">Restaurantes</a>
+            <a href="/categorias/{{"Museos"}}" class="">Museos</a>
         </nav>
 
         <div class="contenedor saludo">
             <h2 class="titulo">Where 2 Go</h2>
-            <h2>Hola Mike</h1>
         </div>
     </header>
 
@@ -35,83 +33,20 @@
         <section class="introduccion">
             <div class="intro">
                 <img src="static/img/where2go.png" alt="" />
-                <p class="lema">Un lugar conocido nos trae</p>
-                <p class="lema">recuerdos</p>
-                <p class="lema">Un lugar nuevo nos trae</p>
-                <p class="lema">experiencias</p>
-
-                <div class="buscar">           
-                    <div class="barra">
-                        <input type="text" id="searchterm" placeholder="Buscar Recomendaciones" />
-                        <button type="button" id="search">Buscar</button>
-                    </div>
-                </div>
+                <h1 class= "subtitulo">{{name}}</h1>
             </div>
         </section>
 
         <section class="catalogue">
+            {% for i in data %}
             <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
+                <img src={{i.imagen}} alt="Test" style="width:100%">
+                <h1>{{i.nombre}}</h1>
+                <p>{{i.calificacion}}</p>
                 <p><button>Ver</button></p>
             </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
+            {% endfor %}
 
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div>
-    
-            <div class="card">
-                <img src="https://img.maspormas.com/2016/03/12496027_496735327195341_4531450152902909991_o.jpg" alt="Test" style="width:100%">
-                <h1>Un lugar</h1>
-                <p>Descripción del lugar...</p>
-                <p><button>Ver</button></p>
-            </div> 
         </section>   
         <footer id="contacto">
             <div class="contenedor footer-content">

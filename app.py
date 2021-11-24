@@ -15,7 +15,6 @@ restaurantes = db.Restaurantes
 museos = db.Museos
 usuarios = db.Usuarios
 
-
 @app.route('/')
 def index():
     return render_template('/login.html')
@@ -33,7 +32,7 @@ def login():
         filter = {"nombre": username}
         search = usuarios.find_one(filter)
         if search is not None:
-            return render_template('/index.html')
+            return render_template('/index.html',user=username)
         else:
             return "<p>el usuario con correo %s no existe<p>" % username
     except Exception as e:
@@ -64,9 +63,22 @@ def signup2():
     return render_template('/signup.html')
 
 
-@app.route('/categorias')
-def categorias():
-    return render_template('/categorias.html')
+@app.route('/categorias/<nombre>',methods=['GET'])
+def categorias(nombre):
+    if nombre == 'Restaurantes':
+        _cursor = restaurantes.find()
+        res = []
+        for doc in _cursor:
+            res.append(doc)
+        return render_template('/categorias.html', name= nombre,data=res)
+    elif nombre == 'Museos':
+        _cursor = museos.find()
+        mus = []
+        for doc in _cursor:
+            mus.append(doc)
+        return render_template('/categorias.html', name= nombre,data=mus)
+    else:
+        return render_template('/single.html')
 
 @app.route('/single')
 def single():

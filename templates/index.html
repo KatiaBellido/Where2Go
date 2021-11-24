@@ -19,12 +19,12 @@
         <img src="/static/img/icons/favicon.ico" alt="Menu" class="hamburger" >
         <nav  class="menu-navegacion">
             <a href="/" class="">Inicio</a>
-            <a href="/categorias" class="">Restaurantes</a>
-            <a href="/categorias" class="">Museos</a>
+            <a href="/categorias/{{"Restaurantes"}}" class="">Restaurantes</a>
+            <a href="/categorias/{{"Museos"}}" class="">Museos</a>
         </nav>
         <div class="contenedor saludo">
             <h2 class="titulo">Where 2 Go</h2>
-            <h2>Hola Mike</h1>
+            <h2>Hola {{user}}!!!</h1>
             <div class="barra">
                 <span class="icon"><i class="fa fa-search"></i></span>
                 <input type="search" id="search" placeholder="Buscar Recomendaciones" />

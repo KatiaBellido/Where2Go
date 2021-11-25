@@ -18,7 +18,7 @@
     <header class="header" id="inicio">
         <img src="/static/img/icons/favicon.ico" alt="Menu" class="hamburger" >
         <nav  class="menu-navegacion">
-            <a href="/" class="">Inicio</a>
+            <a href="/inicio" class="">Inicio</a>
             <a href="/categorias/{{"Restaurantes"}}" class="">Restaurantes</a>
             <a href="/categorias/{{"Museos"}}" class="">Museos</a>
         </nav>
@@ -43,7 +43,7 @@
                 <img src={{i.imagen}} alt="Test" style="width:100%">
                 <h1>{{i.nombre}}</h1>
                 <p>{{i.calificacion}}</p>
-                <a href="/single/{{name}}/{{i.nombre}}"> boton falso</a>
+                <a class = "btn btn-word" href="/single/{{name}}/{{i.nombre}}"> Ver más </a>
             </div>
             {% endfor %}
 

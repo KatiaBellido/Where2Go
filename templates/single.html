@@ -19,7 +19,7 @@
     <header class="header" id="inicio">
         <img src="/static/img/icons/favicon.ico" alt="Menu" class="hamburger" >
         <nav class="menu-navegacion">
-            <a href="/" class="">Inicio</a>
+            <a href="/inicio" class="">Inicio</a>
             <a href="/categorias/{{"Restaurantes"}}" class="">Restaurantes</a>
             <a href="/categorias/{{"Museos"}}" class="">Museos</a>
         </nav>
@@ -41,9 +41,9 @@
                 <h1 class= "subtitulo">{{data.nombre}}</h2>
                 <img src={{data.imagen}}>
                 <p>{{data.descripcion}}</p>
-                <p>{{data.horario}}</p>
-                <p>{{data.calificacion}}</p>
-                <p>{{data.costo}}</p>
+                <p>Horario: {{data.horario}}</p>
+                <p>Calificación: {{data.calificacion}}</p>
+                <p>Precio: {{data.costo}}</p>
               </div>
         </div>
         <footer id="contacto">
